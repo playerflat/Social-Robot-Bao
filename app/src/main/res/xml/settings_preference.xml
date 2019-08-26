@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+            android:key="BackButton"
+            android:title="←  설정"/>
+
+    <Preference
+            android:key="SetupWifi"
+            android:title="Wi-Fi 설정"/>
+
+    <Preference
+        android:key="TeachSentencesMenu"
+        android:title="말 학습시키기">
+    </Preference>
+
+    <Preference
+        android:key="Alarm"
+        android:title="알람 설정하기">
+    </Preference>
+
+    <Preference
+            android:key="SystemRefresh"
+            android:title="사용자 재설정 및 시스템 초기화">
+    </Preference>
+
+    <Preference
+        android:key="Info"
+        android:title="제품 정보">
+    </Preference>
+
+</PreferenceScreen>

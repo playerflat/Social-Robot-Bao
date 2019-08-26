@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="15dp"
+    android:background="#FFEEBB"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="80dp"
+        android:layout_height="68dp"
+        android:layout_margin="5dp"
+        android:background="#00ffffff"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/menu_backbutton" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/border_white"
+            android:weightSum="3"
+            tools:ignore="NestedWeights">
+
+            <ImageButton
+                android:id="@+id/pencil_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/pencil"
+                android:scaleType="fitCenter"
+                android:textSize="45sp" />
+
+            <ImageButton
+                android:id="@+id/eraser_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:scaleType="fitXY"
+                android:background="@drawable/eraser"
+                android:textSize="45sp" />
+
+            <ImageButton
+                android:id="@+id/clear_button"
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/clear_paint"
+                android:scaleType="fitXY"
+                android:textSize="45sp" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            android:padding="5dp"
+            android:background="@drawable/border_white">
+
+            <com.divyanshu.draw.widget.DrawView
+                android:id="@+id/canvas_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/paint_with_image"
+                android:background="#00FFFFFF"
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_marginStart="8dp"
+            android:weightSum="3"
+            android:background="@drawable/border_white"
+            tools:ignore="NestedWeights">
+
+            <ImageButton
+                android:id="@+id/style_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:layout_margin="5dp"
+                android:background="@drawable/brush"
+                android:textSize="45sp" />
+
+            <ImageButton
+                android:id="@+id/undo_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:scaleType="fitXY"
+                android:background="@drawable/undo"
+                android:textSize="45sp" />
+
+            <ImageButton
+                android:id="@+id/redo_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:scaleType="fitXY"
+                android:background="@drawable/redo"
+                android:textSize="45sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

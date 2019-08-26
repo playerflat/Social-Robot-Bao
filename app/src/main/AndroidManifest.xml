@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.welfarerobotics.welfareapplcation">
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--블루투스 권한-->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--사진 권한-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--와이파이 권한-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme"
+        android:screenOrientation="sensorLandscape"
+        android:allowBackup="false"
+        tools:targetApi="m"
+        tools:replace="android:allowBackup">
+
+        <activity
+            android:name=".core.initial.SplashActivity"
+            android:screenOrientation="sensorLandscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- 스플래시 -->
+        <activity
+            android:name=".core.main.MainActivity"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".core.initial.GreetingActivity"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".core.youtube.YoutubeActivity"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name=".core.settings.WifiActivity"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".core.menu.MenuActivity"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".core.settings.SettingActivity"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".core.settings.SysRefreshActivity"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".core.settings.SysRfPopupActivity"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name=".core.settings.LocSettingsActivity"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".core.fairytale.FairytaleListActivity"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".core.initial.InitialSettingActivity"
+            android:screenOrientation="sensorLandscape"
+            android:configChanges="orientation" />
+        <activity
+            android:name=".core.fairytale.FairytaleActivity"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".core.initial.InitialBluetoothActivity"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".core.initial.InitialWifiActivity"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".core.contents.tangram.TangramActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".core.contents.paintwith.PaintWithActivity"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".core.contents.dictation.DictationActivity"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".core.settings.BluetoothActivity"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".core.contents.tangram.TangramSelecActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".core.contents.flashcard.FlashcardActivity"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".core.contents.emotioncard.EmotioncardActivity"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".core.contents.common_sense.CommonQuizActivity"
+            android:screenOrientation="sensorLandscape" />
+
+        <activity
+            android:name=".core.menu.ConversationList"
+            android:screenOrientation="sensorLandscape" />
+
+        <activity
+            android:name=".core.menu.ConversationEdit"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".core.alarm.AddEditAlarmActivity"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".core.alarm.AlarmActivity"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".core.alarm.AlarmLandingPageActivity"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".core.settings.InitConversationMenuActivity"
+            android:screenOrientation="sensorLandscape" />
+
+        <activity
+            android:name=".core.settings.InfoActivity"
+            android:screenOrientation="sensorLandscape" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.bignerdranch.android.test.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key" />
+
+        <service android:name=".core.alarm.LoadAlarmsService" />
+
+        <receiver android:name=".core.alarm.LoadAlarmsReceiver" />
+        <receiver android:name=".core.alarm.AlarmReceiver" />
+    </application>
+
+</manifest>
